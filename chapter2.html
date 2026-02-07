@@ -1,0 +1,1353 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chapter 2: Assessing the Policy Context</title>
+        <style>
+            :root {
+                --primary-color: #2c5530;
+                --secondary-color: #4a7c50;
+                --accent-color: #7fb069;
+                --text-color: #333;
+                --light-bg: #f8f9f7;
+                --quote-bg: #e8f0e8;
+                --border-color: #d4e4d4;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Georgia", serif;
+                line-height: 1.7;
+                color: var(--text-color);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: #fff;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                color: var(--primary-color);
+                border-bottom: 3px solid var(--accent-color);
+                padding-bottom: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                color: var(--primary-color);
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                color: var(--secondary-color);
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+                color: var(--secondary-color);
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                font-style: italic;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            .opening {
+                font-size: 1.1rem;
+                color: #555;
+                border-left: 4px solid var(--accent-color);
+                padding-left: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .key-takeaways {
+                background-color: var(--light-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+            }
+
+            .key-takeaways h2 {
+                margin-top: 0;
+                font-size: 1.4rem;
+            }
+
+            .key-takeaways ul {
+                margin: 0;
+                padding-left: 0;
+                list-style: none;
+            }
+
+            .key-takeaways li {
+                margin-bottom: 1rem;
+                padding-left: 1.5rem;
+                position: relative;
+            }
+
+            .key-takeaways li:before {
+                content: "→";
+                position: absolute;
+                left: 0;
+                color: var(--accent-color);
+                font-weight: bold;
+            }
+
+            .key-takeaways li:last-child {
+                margin-bottom: 0;
+            }
+
+            .key-takeaways strong {
+                color: var(--primary-color);
+            }
+
+            ul {
+                padding-left: 1.5rem;
+            }
+
+            ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            blockquote {
+                background-color: var(--quote-bg);
+                border-left: 4px solid var(--secondary-color);
+                margin: 1.5rem 0;
+                padding: 1rem 1.5rem;
+                border-radius: 0 8px 8px 0;
+                font-style: italic;
+            }
+
+            blockquote p {
+                margin: 0;
+            }
+
+            blockquote .attribution {
+                margin-top: 0.75rem;
+                font-style: normal;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
+            .case-study-intro {
+                background-color: var(--light-bg);
+                border: 2px solid var(--accent-color);
+                border-radius: 8px;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+            }
+
+            .case-study-intro strong {
+                color: var(--primary-color);
+            }
+
+            .case-study-intro p {
+                margin-bottom: 0.75rem;
+            }
+
+            .case-study-intro p:last-child {
+                margin-bottom: 0;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1.5rem 0;
+            }
+
+            th,
+            td {
+                border: 1px solid var(--border-color);
+                padding: 0.75rem;
+                text-align: left;
+            }
+
+            th {
+                background-color: var(--light-bg);
+                color: var(--primary-color);
+                font-weight: bold;
+            }
+
+            td strong {
+                color: var(--secondary-color);
+            }
+
+            .matrix {
+                background-color: var(--light-bg);
+                padding: 1.5rem;
+                border-radius: 8px;
+                font-family: monospace;
+                font-size: 0.9rem;
+                overflow-x: auto;
+                margin: 1.5rem 0;
+            }
+
+            .matrix pre {
+                margin: 0;
+                white-space: pre;
+            }
+
+            .assessment-box {
+                background-color: #f0f4f8;
+                border: 1px solid #d0d8e0;
+                border-radius: 8px;
+                padding: 1rem 1.5rem;
+                margin: 1rem 0;
+                font-size: 0.95rem;
+            }
+
+            .assessment-box p {
+                margin: 0;
+            }
+
+            .figure {
+                background-color: var(--light-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                padding: 1rem;
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+
+            .figure-caption {
+                font-size: 0.9rem;
+                color: #666;
+                font-style: italic;
+                margin-top: 0.5rem;
+            }
+
+            .tool-section {
+                margin-top: 2rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .tool-useful {
+                background-color: var(--quote-bg);
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            .tool-useful strong {
+                color: var(--primary-color);
+            }
+
+            .database-category {
+                font-style: italic;
+                color: var(--secondary-color);
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .reference {
+                font-size: 0.9rem;
+                color: #666;
+                background-color: #fff8e8;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                margin-top: 1rem;
+            }
+
+            .section-divider {
+                border: none;
+                border-top: 2px solid var(--border-color);
+                margin: 3rem 0;
+            }
+
+            .chapter-end {
+                text-align: center;
+                color: #888;
+                font-style: italic;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 2px solid var(--border-color);
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                table {
+                    font-size: 0.9rem;
+                }
+            }
+
+            .evidence-box {
+                background-color: #fff8e6;
+                border: 1px solid #e6d9a8;
+                border-left: 4px solid #d4a84b;
+                border-radius: 0 8px 8px 0;
+                padding: 1rem 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .evidence-box .evidence-label {
+                font-weight: bold;
+                color: #8b6914;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .evidence-box p {
+                margin: 0;
+            }
+
+            .evidence-box p + p {
+                margin-top: 0.75rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chapter 2: Assessing the Policy Context</h1>
+
+        <div class="opening">
+            <p>
+                Before engaging in advocacy, you need to understand your
+                context. What is the state of the problem you want to address?
+                Who are the key decision-makers and what drives their
+                priorities? What policy solutions already exist or are being
+                developed? And critically: is your team positioned to engage
+                effectively?
+            </p>
+            <p>
+                This chapter provides tools for answering these questions. It
+                introduces a practical approach to policy context assessment
+                based on the three streams described in Chapter 1—problems,
+                politics, and policies. The Policy Context Tool helps you
+                systematically analyse these streams to identify where
+                conditions are favourable, where barriers exist, and when policy
+                windows might open.
+            </p>
+        </div>
+
+        <h3>Starting points</h3>
+
+        <p>Teams come to policy engagement through different paths:</p>
+
+        <ul>
+            <li>
+                A <strong>conservation team</strong> using the Conservation
+                Standards may identify "inadequate regulatory framework" or
+                "weak enforcement" as a contributing factor in their
+                <em>situation model</em>—and realise they need to understand the
+                political landscape to address it.
+            </li>
+            <li>
+                A <strong>policy team</strong> may spot a political
+                opportunity—an upcoming election, a scheduled policy review—or
+                be responding to a regulatory threat that affects their work.
+            </li>
+        </ul>
+
+        <p>
+            Whatever the entry point, the challenge is the same: understanding
+            the political context well enough to act strategically. Recognising
+            that policy matters is not the same as knowing how to engage
+            effectively. What are the conditions that would make policy change
+            possible? Is the problem recognised by decision-makers? Are there
+            political actors who might champion this cause? Do feasible policy
+            solutions exist? When might a window of opportunity open?
+        </p>
+
+        <p>
+            The Policy Context Tool introduced in this chapter helps answer
+            these questions. It provides a structured way to assess the
+            political environment—building on the three streams framework from
+            Chapter 1—so that teams can identify where conditions are
+            favourable, where barriers exist, and when windows might open.
+        </p>
+
+        <div class="key-takeaways">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>
+                    <strong>Start with your own readiness.</strong> Before
+                    assessing the external landscape, reflect on your team's
+                    capacity, expertise, relationships, and credibility. Not
+                    every organisation is well-positioned for every advocacy
+                    opportunity.
+                </li>
+                <li>
+                    <strong>Coalitions can fill gaps.</strong> If your team
+                    lacks certain capacities, partnerships can help. Coalitions
+                    pool resources, increase credibility, and extend reach to
+                    decision-makers you cannot access alone.
+                </li>
+                <li>
+                    <strong>Use the three streams as your framework.</strong>
+                    The problems, political, and policy streams provide a
+                    structured way to assess the context. Various
+                    tools—stakeholder analysis, horizon scanning, legal
+                    framework analysis—can help you dig deeper into each stream.
+                </li>
+                <li>
+                    <strong>Assessment informs strategy.</strong> The purpose of
+                    assessment is not to produce a report—it is to understand
+                    your context well enough to act strategically. Assessment
+                    should lead directly to planning (Chapter 3).
+                </li>
+            </ul>
+        </div>
+
+        <hr class="section-divider" />
+
+        <h2>2.1 Your Team and Readiness</h2>
+
+        <p>
+            Before diving into external analysis, take stock of your own
+            organisation. Advocacy requires specific skills, relationships, and
+            resources that may differ from those needed for other conservation
+            work.
+        </p>
+
+        <blockquote>
+            <p>
+                "Ask yourself, are we as an organisation, with the specific
+                skills we have, the best candidate to address this issue?"
+            </p>
+            <p class="attribution">– Sascha Müller-Kraenner</p>
+        </blockquote>
+
+        <h3>Internal capacity</h3>
+
+        <p>
+            An organisation's capacity for advocacy depends on factors
+            including:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Expertise</strong>: Do you have staff with policy
+                knowledge, communication skills, and understanding of the
+                political landscape?
+            </li>
+            <li>
+                <strong>Relationships</strong>: Do you have existing connections
+                to decision-makers, other advocacy organisations, or communities
+                affected by the issue?
+            </li>
+            <li>
+                <strong>Credibility</strong>: Are you seen as a trustworthy
+                voice on this issue? How do decision-makers, the public,
+                potential partners, and industry perceive you?
+            </li>
+            <li>
+                <strong>Resources</strong>: Do you have the time, funding, and
+                staff capacity to sustain an advocacy effort?
+            </li>
+        </ul>
+
+        <p>
+            Capacity gaps take different forms. Conservation organisations may
+            be staffed primarily by field staff and practitioners unfamiliar
+            with political processes. Policy teams may have political expertise
+            but lack the technical knowledge or field credibility needed for a
+            specific issue. Neither is a reason to avoid engagement—but both are
+            reasons to be realistic about what capacity-building, partnerships,
+            or coalition work might be needed.
+        </p>
+
+        <h3>Which level to focus on</h3>
+
+        <p>
+            Policy engagement happens at multiple levels—global, regional,
+            national, and local. As discussed in Chapter 1, these levels
+            interact in complex ways. International commitments create pressure
+            for national action; national frameworks shape what is possible
+            locally; local implementation determines whether policies achieve
+            their intended impact.
+        </p>
+
+        <p>
+            When assessing your readiness, consider which level best matches
+            your:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Existing relationships</strong>: Where do you already
+                have connections and credibility?
+            </li>
+            <li>
+                <strong>Geographic or thematic focus</strong>: Where does your
+                organisation naturally operate?
+            </li>
+            <li>
+                <strong>Capacity</strong>: Do you have the resources and
+                expertise for international processes, or are you better
+                positioned for national or local engagement?
+            </li>
+            <li>
+                <strong>Theory of change</strong>: At which level is the key
+                decision actually made? Where is change most likely to happen?
+            </li>
+        </ul>
+
+        <h3>Coalitions and partnerships</h3>
+
+        <p>
+            Effective advocacy rarely happens in isolation. Building coalitions
+            can help organisations:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Increase influence</strong>: A coordinated message from
+                multiple organisations carries more weight than individual
+                voices
+            </li>
+            <li>
+                <strong>Pool resources</strong>: Different organisations bring
+                different skills, relationships, and capacities
+            </li>
+            <li>
+                <strong>Expand reach</strong>: Partners may have access to
+                decision-makers or communities that you cannot reach alone
+            </li>
+        </ul>
+
+        <blockquote>
+            <p>
+                "You have this big stove with a lot of burners, you gotta keep a
+                lot of things simmering all at the same time. But be strategic
+                in which one you turn up. If it's cold, you can't use it at all.
+                And that's where I think you go back to partnerships and
+                coalitions—no one can do all the things all the time."
+            </p>
+            <p class="attribution">– Sarah Stachowiak</p>
+        </blockquote>
+
+        <hr class="section-divider" />
+
+        <h2>2.2 The Policy Context Tool</h2>
+
+        <p>
+            The Policy Context Tool provides a structured approach to
+            understanding the political environment around a specific issue.
+            Based on Kingdon's Multiple Streams Framework (introduced in Chapter
+            1), it helps teams analyse three streams—problems, politics, and
+            policies—and identify where conditions are favourable for advocacy.
+        </p>
+
+        <p>The tool can be used in multiple ways:</p>
+
+        <ul>
+            <li>
+                <strong>By conservation teams</strong> who have identified
+                advocacy as a strategy in their project and need to unpack the
+                political context around their conservation goals
+            </li>
+            <li>
+                <strong>By policy teams</strong> who work on political issues
+                regularly and need to decide which policies and strategies to
+                prioritise
+            </li>
+            <li>
+                <strong>Retrospectively</strong> to understand how a particular
+                policy outcome occurred and what role policy windows played
+            </li>
+        </ul>
+
+        <h3>Assessing the problems stream</h3>
+
+        <p>
+            In the problems stream, various conditions compete for attention. A
+            condition becomes a recognised <em>problem</em> when people believe
+            something should be done about it.
+        </p>
+
+        <h4>Key aspects to assess:</h4>
+
+        <p>
+            <em>Focusing events</em>: Have there been crises, disasters,
+            studies, or developments that have drawn attention to this issue?
+            Are any such events anticipated?
+        </p>
+
+        <p>
+            <em>Indicators</em>: Is there data showing the condition is
+            worsening? Are there systematic measurements that highlight the
+            problem?
+        </p>
+
+        <p>
+            <em>Feedback on existing policies</em>: Is there evidence that
+            current approaches are failing? Have there been reviews or
+            evaluations that highlight shortcomings?
+        </p>
+
+        <p>
+            <em>Problem framing</em>: How is the problem being defined by
+            decision-makers and the media? Is it framed as a health issue, an
+            economic issue, an environmental issue? Different framings attract
+            different attention and suggest different solutions.
+        </p>
+
+        <h4>Probing questions:</h4>
+
+        <ul>
+            <li>
+                Was there or is there any scheduled feedback on the functioning
+                of the current legal framework?
+            </li>
+            <li>
+                Were there or do we foresee any crises, disasters, studies, or
+                developments that change attention for the problem?
+            </li>
+            <li>
+                Is there any indication that the problem has the attention of
+                decision-makers?
+            </li>
+            <li>
+                Is the problem framed in a certain way by decision-makers? Does
+                the framing differ depending on the person, party, or actor?
+            </li>
+            <li>
+                How much media attention does the problem receive? How is it
+                framed?
+            </li>
+        </ul>
+
+        <div class="evidence-box">
+            <p class="evidence-label">Evidence in the problems stream</p>
+            <p>
+                Evidence is critical here. Data on indicators, studies
+                documenting impacts, and evaluations of existing policies help
+                establish whether a condition is recognised as a problem—and
+                shape how it is framed. Without evidence, you have no case to
+                bring to the table.
+            </p>
+        </div>
+
+        <h3>Assessing the political stream</h3>
+
+        <p>
+            In the political stream, decision-makers prioritise and deprioritise
+            issues based on political context, interest group pressure, public
+            opinion, and personal motivations.
+        </p>
+
+        <h4>Key aspects to assess:</h4>
+
+        <p>
+            <em>Public opinion</em>: What do different publics think about this
+            issue? Is there support or opposition? How organised and vocal are
+            relevant groups?
+        </p>
+
+        <p>
+            <em>Interest groups</em>: Who are the key sectors, industries, and
+            interest groups that relate to this problem? What are their
+            positions? How influential are they?
+        </p>
+
+        <p>
+            <em>Government positions</em>: What is the current government's
+            stance? Who are the key decision-makers? What drives their
+            priorities—party dynamics, electoral calculations, personal
+            interests?
+        </p>
+
+        <p>
+            <em>Political events</em>: What political events are coming up
+            (elections, government transitions, appointments) that might affect
+            priorities or power distribution?
+        </p>
+
+        <h4>Stakeholder analysis</h4>
+
+        <p>
+            A <em>stakeholder analysis</em> helps map who is involved, their
+            positions, and their influence. The most common approach involves
+            two dimensions:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Influence</strong>: A person's or group's capacity to
+                affect political agenda-setting
+            </li>
+            <li>
+                <strong>Alignment</strong>: The extent to which they share your
+                goals
+            </li>
+        </ul>
+
+        <div class="matrix">
+            <pre>
+                    HIGH ALIGNMENT
+                          │
+         Supporters       │        Champions
+                          │
+                          │
+    LOW ──────────────────┼────────────────── HIGH
+    INFLUENCE             │               INFLUENCE
+                          │
+         Bystanders       │        Blockers
+                          │
+                          │
+                    LOW ALIGNMENT</pre
+            >
+        </div>
+
+        <p>
+            <em>Champions</em> are actors with high alignment and high
+            influence—your most valuable allies. <em>Blockers</em> have high
+            influence but low alignment—they can obstruct your goals and may
+            need to be countered or worked around. <em>Supporters</em> share
+            your goals but have limited influence—they may benefit from support
+            to increase their voice. <em>Bystanders</em> have neither high
+            influence nor high alignment—monitor them but don't invest heavily.
+        </p>
+
+        <h4>Probing questions:</h4>
+
+        <ul>
+            <li>
+                Who are the key publics? What is their current opinion on the
+                topic?
+            </li>
+            <li>
+                How important is public opinion for this topic? Will it strongly
+                influence the political agenda?
+            </li>
+            <li>
+                Who are the key interest groups? What are their agendas? How
+                organised and influential are they?
+            </li>
+            <li>
+                Who are the key decision-makers? What drives them—party
+                dynamics, personal preferences, electoral concerns?
+            </li>
+            <li>
+                What political events are coming up that might affect the
+                composition or priorities of the government?
+            </li>
+        </ul>
+
+        <div class="evidence-box">
+            <p class="evidence-label">Evidence in the political stream</p>
+            <p>
+                Many assume that strong evidence will shift political
+                priorities. It rarely does. Political receptivity is shaped by
+                elections, public mood, interest groups, and decision-makers'
+                motivations—not by data. Focus your assessment here on these
+                factors. Evidence becomes valuable later, when a window opens
+                and decision-makers are actively looking for solutions.
+            </p>
+        </div>
+
+        <h3>Assessing the policy stream</h3>
+
+        <p>
+            In the policy stream, ideas, proposals, and solutions float in a
+            "primeval soup" where they are tested, revised, and refined until
+            viable options emerge.
+        </p>
+
+        <h4>Key aspects to assess:</h4>
+
+        <p>
+            <em>Existing policies</em>: What is the current legal and policy
+            framework? What policies exist at local, national, regional, and
+            international levels?
+        </p>
+
+        <p>
+            <em>Policy solutions under discussion</em>: What proposals are being
+            developed or debated? Who is championing them?
+        </p>
+
+        <p>
+            <em>Technical feasibility</em>: Are the proposed solutions
+            technically viable? Are there known limitations or gaps?
+        </p>
+
+        <p>
+            <em>Political acceptability</em>: How do key actors view the
+            proposed solutions? Are they seen as realistic or controversial?
+        </p>
+
+        <h4>Probing questions:</h4>
+
+        <ul>
+            <li>
+                What is the existing legal framework for this issue at different
+                levels?
+            </li>
+            <li>
+                Are there feasible policy solutions available? Do we need more?
+                Do we need to improve existing ones?
+            </li>
+            <li>
+                Have similar proposals been discussed before? What happened to
+                them?
+            </li>
+            <li>
+                How does the specialised policy community feel about particular
+                solutions?
+            </li>
+            <li>
+                Do we foresee any constraints to the political acceptability of
+                solutions?
+            </li>
+            <li>What evidence gaps exist that might need to be addressed?</li>
+        </ul>
+
+        <div class="evidence-box">
+            <p class="evidence-label">Evidence in the policy stream</p>
+            <p>
+                Evidence is essential for developing and defending solutions. It
+                helps establish technical feasibility, anticipate objections,
+                and identify gaps that opponents might exploit. Having a
+                well-evidenced proposal ready is what allows you to act when a
+                window opens.
+            </p>
+        </div>
+
+        <hr class="section-divider" />
+
+        <h2>2.3 Putting It Together: PFAS Case Study</h2>
+
+        <div class="case-study-intro">
+            <p><strong>About this case study</strong></p>
+            <p>
+                Throughout this guidebook, we follow a team working on PFAS
+                (per- and polyfluoroalkyl substances) regulation to illustrate
+                the concepts and tools in practice. In this chapter, the team
+                assesses their policy context. In Chapter 3, they develop their
+                engagement strategy. In Chapter 4, they design their approach to
+                measuring progress.
+            </p>
+            <p>
+                The team came to policy engagement through the Conservation
+                Standards—but the methods they use apply regardless of your
+                starting point.
+            </p>
+        </div>
+
+        <p>
+            This section shows how the team applied the Policy Context Tool to
+            understand the political landscape around PFAS regulation.
+        </p>
+
+        <h3>The issue and entry point</h3>
+
+        <p>
+            PFAS (per- and polyfluoroalkyl substances) are synthetic chemicals
+            that persist in the environment and accumulate in living organisms.
+            They are found in drinking water, food, and everyday products.
+        </p>
+
+        <p>
+            This particular team arrived at policy engagement through a
+            Conservation Standards situation analysis. As part of Step 1
+            ('Assess'), they developed a <em>situation model</em>—a visual
+            representation mapping the causal chain from contributing factors
+            through direct threats to impacts on biodiversity and human
+            wellbeing (Figure 2.1).
+        </p>
+
+        <p>
+            The situation model revealed that "inadequate regulatory framework"
+            was a key contributing factor driving PFAS contamination. But
+            identifying this gap was only the first step. To address it, the
+            team needed to understand the political context: What would it
+            actually take to strengthen PFAS regulation?
+        </p>
+
+        <div class="figure" style="padding: 0; overflow: hidden">
+            <iframe
+                src="./Chapter2_Situation_Model.html"
+                style="
+                    width: 100%;
+                    height: 650px;
+                    border: none;
+                    transform: scale(0.55);
+                    transform-origin: top left;
+                    width: 182%;
+                    height: 1180px;
+                "
+            ></iframe>
+            <p class="figure-caption" style="padding: 1rem">
+                Figure 2.1: Situation model for PFAS contamination. The model
+                identifies "inadequate regulatory framework" as a contributing
+                factor—the starting point for this team's policy context
+                assessment.
+            </p>
+        </div>
+
+        <h3>What the situation model showed</h3>
+
+        <p>
+            <strong>Focal values</strong> include freshwater ecosystems, soil
+            biodiversity, and coastal/marine ecosystems, as well as human
+            wellbeing targets such as safe drinking water, food safety, and
+            economic livelihoods.
+        </p>
+
+        <p>
+            <strong>Direct threats</strong> are all forms of PFAS pollution
+            (IUCN-CMP Category 9.1: Water-Borne Pollution):
+        </p>
+        <ul>
+            <li>Industrial PFAS discharge from manufacturing facilities</li>
+            <li>Application of contaminated biosolids on agricultural land</li>
+            <li>
+                Use of PFAS firefighting foams at military bases and airports
+            </li>
+        </ul>
+
+        <p>
+            <strong>Biophysical factors</strong> show how these threats affect
+            ecosystems: surface water contamination, soil contamination,
+            groundwater contamination, and bioaccumulation through food chains.
+        </p>
+
+        <p>
+            <strong>Contributing factors</strong> reveal the drivers behind
+            these threats—and this is where policy becomes visible:
+        </p>
+        <ul>
+            <li>
+                <em>Inadequate regulatory framework</em>: Only 12 of
+                approximately 10,000 PFAS compounds are currently regulated
+            </li>
+            <li>
+                <em>Weak sludge regulations</em>: Inadequate controls on
+                biosolids application
+            </li>
+            <li>
+                <em>Polluter-pays principle not enforced</em>: Costs fall on the
+                public and water utilities (estimated €18 billion annually)
+            </li>
+            <li>
+                <em>Chemical industry influence</em>: Lobbying against strict
+                regulations
+            </li>
+        </ul>
+
+        <p>
+            The situation model also identifies opportunities: a restriction
+            proposal is under development at EU level, new drinking water limits
+            are coming in 2026, public support for a ban exceeds 75%, and water
+            utilities are well organised as advocates.
+        </p>
+
+        <h3>Applying the Policy Context Tool</h3>
+
+        <p>
+            With the situation model complete, the team turns to the Policy
+            Context Tool. Their goal is to reduce PFAS threats to biodiversity
+            and human wellbeing—but to do that, they need to understand the
+            political landscape.
+        </p>
+
+        <h3>Problems stream assessment</h3>
+
+        <p>The problems stream shows strong recognition of the issue:</p>
+
+        <table>
+            <tr>
+                <th>Factor</th>
+                <th>Assessment</th>
+            </tr>
+            <tr>
+                <td><strong>Focusing events</strong></td>
+                <td>
+                    Multiple: health impacts documented, €18 billion annual
+                    water treatment costs, contamination studies, cross-border
+                    concerns, agricultural impacts, risks to tourism in coastal
+                    areas
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Indicators</strong></td>
+                <td>
+                    TFA in rainwater increased 20-fold in 20 years; PFAS
+                    widespread in drinking water and soils; PFAS detected in
+                    blood of nearly all citizens
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Media attention</strong></td>
+                <td>
+                    Very high; multiple stories on health risks and
+                    contamination
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Problem framing</strong></td>
+                <td>
+                    Framed as public health crisis (cancer, immune system
+                    effects, reproductive health), economic burden, and
+                    environmental contamination
+                </td>
+            </tr>
+        </table>
+
+        <div class="assessment-box">
+            <p>
+                <em>Assessment</em>: The problem is well-recognised. Multiple
+                focusing events keep it on the agenda. The framing as a health
+                and economic issue (not just environmental) broadens the
+                coalition of concerned actors and resonates with different
+                political constituencies.
+            </p>
+        </div>
+
+        <h3>Political stream assessment</h3>
+
+        <p>
+            The political stream shows a contested but favourable environment:
+        </p>
+
+        <table>
+            <tr>
+                <th>Factor</th>
+                <th>Assessment</th>
+            </tr>
+            <tr>
+                <td><strong>Public opinion</strong></td>
+                <td>
+                    75%+ support an EU-wide ban; high awareness of health risks;
+                    local communities concerned about drinking water
+                    contamination
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Interest groups - supportive</strong></td>
+                <td>
+                    Water utilities (high influence), environmental
+                    organisations (medium-high), tourism industry (medium),
+                    affected agricultural communities
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Interest groups - opposing</strong></td>
+                <td>
+                    Chemical industry (very high influence); actively lobbying
+                    to reframe regulation as threat to "essential uses"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Government position</strong></td>
+                <td>
+                    Current government hesitant due to industry ties; incoming
+                    conservative government expected to be receptive to both
+                    economic arguments and constituent concerns about health
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Political events</strong></td>
+                <td>
+                    National elections upcoming; government transition expected
+                </td>
+            </tr>
+        </table>
+
+        <div class="assessment-box">
+            <p>
+                <em>Assessment</em>: Public support is strong. A coalition of
+                supportive interest groups exists, united by economic and health
+                concerns. The incoming conservative government is likely
+                attentive to constituents in electoral districts worried about
+                polluted drinking water. However, the chemical industry has
+                significant influence and is actively working to shape the new
+                government's position. The transition creates a political
+                window—but also a risk that industry framing takes hold first.
+            </p>
+        </div>
+
+        <h3>Policy stream assessment</h3>
+
+        <p>
+            The policy stream shows solutions are available but not fully
+            developed:
+        </p>
+
+        <table>
+            <tr>
+                <th>Factor</th>
+                <th>Assessment</th>
+            </tr>
+            <tr>
+                <td><strong>EU framework</strong></td>
+                <td>
+                    Restriction proposal under assessment at EU level, including
+                    essential/non-essential use distinction; new drinking water
+                    limits coming in 2026
+                </td>
+            </tr>
+            <tr>
+                <td><strong>National role</strong></td>
+                <td>
+                    Member state support needed for EU process; national
+                    position will influence outcome
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Industry counter-strategy</strong></td>
+                <td>
+                    Chemical lobby reframing at national level: arguing certain
+                    uses are so essential that any regulation is dangerous
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Political acceptability</strong></td>
+                <td>
+                    Essential/non-essential distinction provides a balanced
+                    middle ground—if industry reframing is countered
+                </td>
+            </tr>
+        </table>
+
+        <div class="assessment-box">
+            <p>
+                <em>Assessment</em>: A viable policy solution already exists at
+                EU level. The team's task is not to develop a new proposal but
+                to ensure national support for the ongoing EU process. The main
+                risk is that industry successfully reframes the debate before
+                the new government forms its position.
+            </p>
+        </div>
+
+        <h3>Identifying the window and what to couple</h3>
+
+        <p>
+            A political window is opening with the expected government
+            transition. To make use of it, the team needs to couple three
+            things:
+        </p>
+
+        <ul>
+            <li>
+                <strong>The problem</strong>: PFAS contamination as a public
+                health and economic crisis—affecting citizens' health, burdening
+                water utilities, threatening tourism and agriculture.
+            </li>
+            <li>
+                <strong>The political receptivity</strong>: The incoming
+                conservative government is likely receptive to economic
+                arguments from affected industries and to constituent concerns
+                about drinking water and health in their electoral districts.
+            </li>
+            <li>
+                <strong>The solution</strong>: National support for the EU
+                restriction proposal, which provides a balanced approach through
+                the essential/non-essential use distinction.
+            </li>
+        </ul>
+
+        <p>
+            The window is predictable (election dates are known) but
+            time-limited (new governments are most receptive in their early
+            months). The main strategic task is to make this coupling before
+            industry reframing takes hold. If the new administration adopts the
+            "essential uses are threatened" narrative first, it could weaken
+            member state support for the EU process.
+        </p>
+
+        <p>
+            Chapter 3 shows how the team translates this assessment into a
+            concrete engagement strategy.
+        </p>
+
+        <hr class="section-divider" />
+
+        <h2>2.4 Supporting Tools</h2>
+
+        <p>
+            The Policy Context Tool provides a high-level framework for
+            assessment. Depending on your needs, you may want to use additional
+            tools for more detailed analysis of specific components. Below is a
+            selection of tools that practitioners have found useful.
+        </p>
+
+        <div class="tool-section">
+            <h3>Horizon scanning</h3>
+
+            <div class="tool-useful">
+                <strong>Useful for</strong>: Identifying upcoming focusing
+                events, anticipated political changes, and emerging policy
+                ideas—informing all three streams.
+            </div>
+
+            <p>
+                <em>Horizon scanning</em> identifies emerging problems and
+                opportunities at an early stage, allowing timely preparation of
+                strategies. Through structured methods—trend analysis, expert
+                consultation, literature review, and monitoring of scientific
+                and policy signals—teams can detect early indicators of issues
+                that may gain relevance over time.
+            </p>
+
+            <p>
+                For conservation teams, this might mean regularly reviewing
+                outputs from larger horizon scanning exercises (such as the
+                annual scan published by Sutherland et al. in
+                <em>Trends in Ecology & Evolution</em>), monitoring policy
+                calendars for scheduled reviews and decisions, and tracking
+                political developments that could open or close windows.
+            </p>
+        </div>
+
+        <div class="tool-section">
+            <h3>Policymaker ratings</h3>
+
+            <div class="tool-useful">
+                <strong>Useful for</strong>: Assessing the political
+                stream—mapping decision-maker positions and tracking changes
+                over time.
+            </div>
+
+            <p>
+                The <em>policymaker rating method</em> measures political
+                support for a specific advocacy issue among a defined group of
+                policymakers. It uses advocates' existing knowledge to rate
+                policymakers on three scales:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Level of support</strong>: The policymaker's backing
+                    of the issue, based on public behaviour or actions
+                </li>
+                <li>
+                    <strong>Level of influence</strong>: The policymaker's
+                    ability to affect the issue
+                </li>
+                <li>
+                    <strong>Rater confidence</strong>: Confidence in the
+                    accuracy of the ratings
+                </li>
+            </ul>
+
+            <p>
+                Ratings can be aggregated across policymakers and combined with
+                contextual data (party affiliation, committee membership) for
+                deeper analysis. The exercise can be repeated over time to track
+                changes in political support.
+            </p>
+
+            <div class="reference">
+                <strong>Reference</strong>: [TO ADD: Unique Methods in Advocacy
+                Evaluation - correct citation needed]
+            </div>
+        </div>
+
+        <div class="tool-section">
+            <h3>Legal framework analysis</h3>
+
+            <div class="tool-useful">
+                <strong>Useful for</strong>: Assessing the policy
+                stream—understanding what solutions exist and where gaps remain.
+            </div>
+
+            <p>
+                A <em>legal framework analysis</em> maps the laws, regulations,
+                policies, and international commitments that govern the issue
+                you aim to influence. Understanding the existing framework helps
+                identify what solutions are already in place and where
+                improvements are needed.
+            </p>
+
+            <p>Useful databases include:</p>
+
+            <p class="database-category">Environmental law databases:</p>
+            <ul>
+                <li>
+                    <strong>ECOLEX</strong> (ecolex.org): Information on
+                    environmental treaties, soft-law, national legislation, and
+                    judicial decisions. Operated jointly by FAO, IUCN, and UNEP.
+                </li>
+                <li>
+                    <strong>InforMEA</strong> (informea.org): UN portal on
+                    Multilateral Environmental Agreements, including national
+                    reports, plans, and COP decisions.
+                </li>
+            </ul>
+
+            <p class="database-category">Issue-specific databases:</p>
+            <ul>
+                <li>
+                    <strong>FAOLEX</strong> (faolex.fao.org): National laws,
+                    regulations, and policies on food, agriculture, and natural
+                    resource management.
+                </li>
+                <li>
+                    <strong>CITESlex</strong>: Legislation and policies relevant
+                    to the implementation of CITES.
+                </li>
+            </ul>
+
+            <p class="database-category">Regional databases:</p>
+            <ul>
+                <li>
+                    <strong>EUR-Lex</strong> (eur-lex.europa.eu): European Union
+                    law, including treaties, legislation, case law, and
+                    preparatory documents.
+                </li>
+                <li>
+                    <strong>AfricanLII</strong> (africanlii.org): African
+                    regional and national laws.
+                </li>
+            </ul>
+        </div>
+
+        <div class="tool-section">
+            <h3>Evidence needs analysis</h3>
+
+            <div class="tool-useful">
+                <strong>Useful for</strong>: Assessing the policy
+                stream—determining whether the evidence base for proposed
+                solutions is sufficient.
+            </div>
+
+            <p>
+                An <em>evidence needs analysis</em> identifies what scientific
+                data, research findings, or technical information already exists
+                on a topic, and where gaps remain. This helps determine whether
+                targeted research is needed to support a policy proposal.
+            </p>
+
+            <p>
+                Approaches include structured literature reviews, gap mapping
+                exercises, and participatory methods that bring together
+                policymakers, practitioners, and researchers to identify
+                priority information needs.
+            </p>
+
+            <div class="reference">
+                <strong>Reference</strong>: [TO VERIFY: Sutherland, W.J. et al.
+                (2011). Methods for collaboratively identifying research
+                priorities and emerging issues in science and policy.
+                <em>Methods in Ecology and Evolution</em>, 2(3), 238–247.]
+            </div>
+        </div>
+
+        <div class="chapter-end">
+            <p>End of Chapter 2</p>
+        </div>
+    </body>
+</html>

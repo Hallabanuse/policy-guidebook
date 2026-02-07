@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PFAS Case Study - Situation Model</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: #fff;
+                padding: 30px;
+                min-width: 1450px;
+            }
+
+            .title-badge {
+                background: #c17f24;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            h1 {
+                font-size: 22px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 30px;
+            }
+
+            .diagram-container {
+                position: relative;
+                width: 1400px;
+                height: 580px;
+                margin: 0 auto;
+            }
+
+            .box {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 11px;
+                line-height: 1.3;
+                padding: 8px;
+                font-weight: 500;
+                background: #fff;
+            }
+
+            /* Contributing Factor - Official color #ffc03f */
+            .contributing-factor {
+                border: 3px solid #ffc03f;
+                border-radius: 4px;
+                width: 125px;
+                height: 52px;
+            }
+
+            /* Direct Threat - Official color #e88980 */
+            .direct-threat {
+                border: 3px solid #e88980;
+                border-radius: 4px;
+                width: 125px;
+                height: 52px;
+            }
+
+            /* Biophysical Factor - Official color #c3be83 */
+            .biophysical {
+                border: 3px solid #c3be83;
+                border-radius: 12px;
+                width: 125px;
+                height: 52px;
+            }
+
+            /* Biodiversity Focal Value - Official color #b2dfb2 */
+            .biodiversity {
+                border: 3px solid #b2dfb2;
+                border-radius: 50%;
+                width: 115px;
+                height: 58px;
+            }
+
+            /* Ecosystem Service - Uses biophysical color #c3be83 */
+            .ecosystem-service {
+                border: 3px solid #c3be83;
+                border-radius: 12px;
+                width: 110px;
+                height: 52px;
+            }
+
+            /* Human Wellbeing - Official color #808b82 */
+            .human-wellbeing {
+                border: 3px solid #808b82;
+                border-radius: 50%;
+                width: 115px;
+                height: 58px;
+            }
+
+            /* Scope backgrounds */
+            .conservation-scope {
+                position: absolute;
+                background: rgba(178, 223, 178, 0.25);
+                border-radius: 15px;
+            }
+
+            .human-wellbeing-scope {
+                position: absolute;
+                background: rgba(128, 139, 130, 0.15);
+                border-radius: 15px;
+            }
+
+            .scope-label {
+                position: absolute;
+                font-weight: bold;
+                font-size: 14px;
+                color: #333;
+                text-align: center;
+            }
+
+            .scope-sublabel {
+                font-weight: normal;
+                font-size: 11px;
+                color: #555;
+                display: block;
+            }
+
+            .services-label {
+                position: absolute;
+                font-weight: bold;
+                font-size: 13px;
+                color: #333;
+                text-align: center;
+            }
+
+            /* Legend */
+            .legend {
+                margin-top: 30px;
+                padding: 20px;
+                background: #f9f9f9;
+                border-radius: 8px;
+            }
+
+            .legend-title {
+                font-weight: bold;
+                font-size: 12px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #666;
+            }
+
+            .legend-items {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+
+            .legend-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 12px;
+            }
+
+            .legend-box {
+                width: 35px;
+                height: 20px;
+                background: #fff;
+            }
+
+            .legend-oval {
+                width: 35px;
+                height: 20px;
+                border-radius: 50%;
+                background: #fff;
+            }
+
+            .footer {
+                margin-top: 25px;
+                font-size: 11px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="title-badge">FIGURE</span>
+        <h1>Situation Model: PFAS Contamination</h1>
+
+        <div class="diagram-container">
+            <!-- Arrows removed for clarity - boxes arranged in logical causal sequence left-to-right -->
+            <!-- Add arrows manually in Miro or presentation tool -->
+
+            <!-- Conservation Scope Background -->
+            <div
+                class="conservation-scope"
+                style="left: 750px; top: 75px; width: 140px; height: 305px"
+            ></div>
+            <div
+                class="scope-label"
+                style="left: 755px; top: 50px; width: 130px"
+            >
+                National<br />Ecosystems
+            </div>
+
+            <!-- Ecosystem Services label -->
+            <div
+                class="services-label"
+                style="left: 920px; top: 50px; width: 120px"
+            >
+                Ecosystem<br />Services
+            </div>
+
+            <!-- Human Wellbeing Scope Background -->
+            <div
+                class="human-wellbeing-scope"
+                style="left: 1065px; top: 75px; width: 145px; height: 305px"
+            ></div>
+            <div
+                class="scope-label"
+                style="left: 1075px; top: 50px; width: 125px"
+            >
+                Affected<span class="scope-sublabel">Communities</span>
+            </div>
+
+            <!-- ============ ROW 1: Industrial Production Chain ============ -->
+            <div class="box contributing-factor" style="left: 0px; top: 50px">
+                Chemical industry<br />influence
+            </div>
+            <div class="box contributing-factor" style="left: 148px; top: 50px">
+                Widespread<br />industrial use
+            </div>
+            <div class="box direct-threat" style="left: 296px; top: 50px">
+                Industrial PFAS<br />discharge
+            </div>
+            <div class="box biophysical" style="left: 444px; top: 50px">
+                Surface water<br />contamination
+            </div>
+            <div class="box biophysical" style="left: 592px; top: 50px">
+                Contamination<br />of water supply
+            </div>
+            <div class="box biodiversity" style="left: 760px; top: 100px">
+                Freshwater<br />ecosystems
+            </div>
+            <div class="box ecosystem-service" style="left: 920px; top: 104px">
+                Clean water<br />provision
+            </div>
+            <div class="box human-wellbeing" style="left: 1075px; top: 100px">
+                Safe drinking<br />water
+            </div>
+
+            <!-- ============ ROW 2: Agricultural Chain ============ -->
+            <div class="box contributing-factor" style="left: 0px; top: 230px">
+                Weak sludge<br />regulations
+            </div>
+            <div class="box direct-threat" style="left: 148px; top: 140px">
+                Application of<br />contaminated biosolids
+            </div>
+            <div class="box biophysical" style="left: 296px; top: 140px">
+                Soil<br />contamination
+            </div>
+            <div class="box biophysical" style="left: 444px; top: 140px">
+                Bioaccumulation<br />in food chain
+            </div>
+            <div class="box biophysical" style="left: 592px; top: 140px">
+                Contaminated<br />agricultural products
+            </div>
+            <div class="box biodiversity" style="left: 760px; top: 155px">
+                Soil<br />biodiversity
+            </div>
+            <div class="box ecosystem-service" style="left: 920px; top: 159px">
+                Food<br />production
+            </div>
+            <div class="box human-wellbeing" style="left: 1075px; top: 155px">
+                Food safety &<br />human health
+            </div>
+
+            <!-- ============ ROW 3: Firefighting Chain ============ -->
+            <div class="box contributing-factor" style="left: 0px; top: 320px">
+                Military & airport<br />operations
+            </div>
+            <div class="box direct-threat" style="left: 148px; top: 230px">
+                Use of PFAS<br />firefighting foams
+            </div>
+            <div class="box biophysical" style="left: 296px; top: 230px">
+                Groundwater<br />contamination
+            </div>
+
+            <!-- ============ ROW 4: Coastal/Tourism ============ -->
+            <div class="box biodiversity" style="left: 760px; top: 305px">
+                Coastal & marine<br />ecosystems
+            </div>
+            <div class="box ecosystem-service" style="left: 920px; top: 309px">
+                Recreation &<br />tourism
+            </div>
+            <div class="box human-wellbeing" style="left: 1075px; top: 305px">
+                Economic<br />livelihoods
+            </div>
+
+            <!-- ============ Additional contributing factors ============ -->
+            <div
+                class="box contributing-factor"
+                style="left: 148px; top: 320px"
+            >
+                PFAS in<br />pesticides
+            </div>
+
+            <!-- ============ Opportunities (bottom) ============ -->
+            <div class="box contributing-factor" style="left: 0px; top: 420px">
+                + Restriction proposal<br />in development
+            </div>
+            <div
+                class="box contributing-factor"
+                style="left: 148px; top: 420px"
+            >
+                + New drinking water<br />limits coming
+            </div>
+            <div
+                class="box contributing-factor"
+                style="left: 296px; top: 420px"
+            >
+                + Strong public<br />support for ban
+            </div>
+            <div
+                class="box contributing-factor"
+                style="left: 444px; top: 420px"
+            >
+                + Water utilities<br />well organised
+            </div>
+
+            <!-- Regulatory issues -->
+            <div class="box contributing-factor" style="left: 0px; top: 500px">
+                Inadequate<br />regulatory framework
+            </div>
+            <div
+                class="box contributing-factor"
+                style="left: 148px; top: 500px"
+            >
+                Polluter-pays<br />not enforced
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-title">Key</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div
+                        class="legend-box"
+                        style="border: 3px solid #ffc03f"
+                    ></div>
+                    <span>Contributing Factor</span>
+                </div>
+                <div class="legend-item">
+                    <div
+                        class="legend-box"
+                        style="border: 3px solid #e88980"
+                    ></div>
+                    <span>Direct Threat</span>
+                </div>
+                <div class="legend-item">
+                    <div
+                        class="legend-box"
+                        style="border: 3px solid #c3be83; border-radius: 6px"
+                    ></div>
+                    <span>Biophysical Factor</span>
+                </div>
+                <div class="legend-item">
+                    <div
+                        class="legend-oval"
+                        style="border: 3px solid #b2dfb2"
+                    ></div>
+                    <span>Biodiversity Focal Value</span>
+                </div>
+                <div class="legend-item">
+                    <div
+                        class="legend-oval"
+                        style="border: 3px solid #808b82"
+                    ></div>
+                    <span>Human Wellbeing Focal Value</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Case Study:</strong> PFAS Policy Engagement</p>
+            <p>
+                <strong>Based on:</strong> Open Standards for the Practice of
+                Conservation (Conservation Measures Partnership)
+            </p>
+        </div>
+    </body>
+</html>

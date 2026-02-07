@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chapter 1: Understanding Policy Processes</title>
+        <style>
+            :root {
+                --primary-color: #2c5530;
+                --secondary-color: #4a7c50;
+                --accent-color: #7fb069;
+                --text-color: #333;
+                --light-bg: #f8f9f7;
+                --quote-bg: #e8f0e8;
+                --border-color: #d4e4d4;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Georgia", serif;
+                line-height: 1.7;
+                color: var(--text-color);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: #fff;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                color: var(--primary-color);
+                border-bottom: 3px solid var(--accent-color);
+                padding-bottom: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                color: var(--primary-color);
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                color: var(--secondary-color);
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+                color: var(--secondary-color);
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                font-style: italic;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            .opening {
+                font-size: 1.1rem;
+                color: #555;
+                border-left: 4px solid var(--accent-color);
+                padding-left: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .key-takeaways {
+                background-color: var(--light-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+            }
+
+            .key-takeaways h2 {
+                margin-top: 0;
+                font-size: 1.4rem;
+            }
+
+            .key-takeaways ul {
+                margin: 0;
+                padding-left: 0;
+                list-style: none;
+            }
+
+            .key-takeaways li {
+                margin-bottom: 1rem;
+                padding-left: 1.5rem;
+                position: relative;
+            }
+
+            .key-takeaways li:before {
+                content: "→";
+                position: absolute;
+                left: 0;
+                color: var(--accent-color);
+                font-weight: bold;
+            }
+
+            .key-takeaways li:last-child {
+                margin-bottom: 0;
+            }
+
+            .key-takeaways strong {
+                color: var(--primary-color);
+            }
+
+            ol {
+                padding-left: 1.5rem;
+            }
+
+            ol li {
+                margin-bottom: 0.75rem;
+                padding-left: 0.5rem;
+            }
+
+            ol li strong {
+                color: var(--secondary-color);
+            }
+
+            ul {
+                padding-left: 1.5rem;
+            }
+
+            ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            blockquote {
+                background-color: var(--quote-bg);
+                border-left: 4px solid var(--secondary-color);
+                margin: 1.5rem 0;
+                padding: 1rem 1.5rem;
+                border-radius: 0 8px 8px 0;
+                font-style: italic;
+            }
+
+            blockquote p {
+                margin: 0;
+            }
+
+            blockquote .attribution {
+                margin-top: 0.75rem;
+                font-style: normal;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
+            .note {
+                background-color: #f0f4f8;
+                border: 1px solid #d0d8e0;
+                border-radius: 8px;
+                padding: 1rem 1.5rem;
+                margin: 1.5rem 0;
+                font-size: 0.95rem;
+            }
+
+            .case-study {
+                background-color: var(--light-bg);
+                border: 2px solid var(--accent-color);
+                border-radius: 8px;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+            }
+
+            .case-study h4 {
+                color: var(--primary-color);
+                margin-top: 0;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                font-style: normal;
+            }
+
+            .case-study p {
+                margin-bottom: 0.75rem;
+            }
+
+            .case-study p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .case-study .source {
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
+            .note p {
+                margin: 0;
+            }
+
+            .section-divider {
+                border: none;
+                border-top: 2px solid var(--border-color);
+                margin: 3rem 0;
+            }
+
+            .chapter-end {
+                text-align: center;
+                color: #888;
+                font-style: italic;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 2px solid var(--border-color);
+            }
+
+            .three-factors p {
+                margin-bottom: 1rem;
+            }
+
+            .three-factors strong {
+                color: var(--secondary-color);
+            }
+
+            .success-levels {
+                background-color: var(--light-bg);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                margin: 1rem 0;
+            }
+
+            .success-levels ul {
+                margin: 0;
+                columns: 2;
+                column-gap: 2rem;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                .success-levels ul {
+                    columns: 1;
+                }
+            }
+
+            .evidence-box {
+                background-color: #fff8e6;
+                border: 1px solid #e6d9a8;
+                border-left: 4px solid #d4a84b;
+                border-radius: 0 8px 8px 0;
+                padding: 1rem 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .evidence-box .evidence-label {
+                font-weight: bold;
+                color: #8b6914;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .evidence-box p {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chapter 1: Understanding Policy Processes</h1>
+
+        <div class="opening">
+            <p>
+                Conservation does not happen only in forests, rivers, or
+                protected areas. It also unfolds in meeting rooms, legislative
+                chambers, and public consultations—spaces where decisions shape
+                what protection is possible, funded, or enforced. For many
+                practitioners, meaningful conservation therefore requires
+                stepping beyond on-the-ground action and into the complex world
+                of policy.
+            </p>
+            <p>
+                This chapter provides the foundation for that step. It explains
+                how policy processes work, why they often feel unpredictable,
+                and what challenges you will face when trying to influence them.
+                Understanding these dynamics is essential before picking up the
+                practical tools in Chapters 2, 3, and 4.
+            </p>
+        </div>
+
+        <div class="key-takeaways">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>
+                    <strong
+                        >Policy processes are messy and unpredictable.</strong
+                    >
+                    Policies move through stages—from agenda-setting to
+                    formulation, adoption, implementation, and review. But
+                    getting an issue onto the agenda in the first place is the
+                    hard part. The Multiple Streams Framework explains how this
+                    happens: problems, politics, and viable solutions must
+                    converge in brief windows of opportunity.
+                </li>
+                <li>
+                    <strong>Policy windows are critical moments.</strong> Most
+                    major policy changes happen when the right problem, the
+                    right political conditions, and a viable solution come
+                    together. These windows are often short and unpredictable,
+                    which means preparation matters as much as timing.
+                </li>
+                <li>
+                    <strong
+                        >Success is hard to define and harder to claim.</strong
+                    >
+                    What counts as policy success? A law passed? A commitment
+                    made? Real implementation? Even when outcomes are clear,
+                    multiple actors contribute to every result. Attribution to
+                    any single organisation is inherently difficult.
+                </li>
+                <li>
+                    <strong>Evidence alone doesn't change minds.</strong>
+                    Scientific data matters enormously for credibility and for
+                    making the case once decision-makers are receptive—but the
+                    assumption that good evidence leads directly to good policy
+                    is wrong. Evidence is necessary but not sufficient.
+                </li>
+                <li>
+                    <strong>Policy happens at multiple levels.</strong> Advocacy
+                    occurs at global, regional, national, and local levels
+                    simultaneously. International commitments can create
+                    pressure and reference points, but real change requires
+                    national and local action.
+                </li>
+            </ul>
+        </div>
+
+        <hr class="section-divider" />
+
+        <h2>1.1 How Policy Processes Work</h2>
+
+        <p>
+            Understanding how policies are created is essential for those who
+            seek to influence them. This section introduces the policy cycle—the
+            stages that policies move through—and then focuses on
+            agenda-setting, often the most critical and unpredictable stage. The
+            Multiple Streams Framework helps explain why some issues gain
+            political attention while others are ignored, and what it takes for
+            change to happen.
+        </p>
+
+        <h3>The policy cycle</h3>
+
+        <p>
+            Policy processes differ across global, regional, national, and local
+            systems, but they often follow a similar pattern. The
+            <em>policy cycle</em> is a common way to describe this pattern,
+            depicting policymaking as a series of stages:
+        </p>
+
+        <ol>
+            <li>
+                <strong>Agenda-setting:</strong> Decision-makers identify and
+                prioritise issues. This process is shaped by how problems are
+                defined, political receptivity, and what solutions are
+                available.
+            </li>
+            <li>
+                <strong>Policy formulation:</strong> Policies are drafted, often
+                involving multiple rounds of consultation, research, and
+                negotiation.
+            </li>
+            <li>
+                <strong>Adoption:</strong> The policy is formally approved by
+                the relevant authorities. The procedural steps vary across
+                political systems.
+            </li>
+            <li>
+                <strong>Implementation:</strong> Adopted policies are translated
+                into action through programmes, regulations, and administrative
+                procedures.
+            </li>
+            <li>
+                <strong>Review and evaluation:</strong> The policy's
+                implementation and effectiveness are assessed. Ideally, this
+                feeds back into agenda-setting, and the cycle continues.
+            </li>
+        </ol>
+
+        <p>
+            The cycle is often depicted as a circle to highlight its iterative
+            nature. In reality, however, policymaking is rarely this linear.
+            Stages overlap, reverse, or skip entirely. A policy may be adopted
+            but never implemented. An issue may cycle through agenda-setting
+            repeatedly without ever reaching adoption. The cycle is useful as a
+            simplified model, but it does not capture the messy reality of how
+            policy actually happens.
+        </p>
+
+        <h3>What shapes advocacy success</h3>
+
+        <p>
+            Policy engagement and the success of advocacy are shaped by three
+            main factors:
+        </p>
+
+        <div class="three-factors">
+            <p>
+                <strong>General constraints</strong> are the systemic factors
+                that shape civil society's ability to influence the policymaking
+                process: the transparency of institutions, access to
+                decision-makers, availability of funding, inclusive consultation
+                mechanisms, and rules of procedure. These constraints can either
+                limit or facilitate engagement. In some contexts, overcoming
+                them is a strategic focus in itself.
+            </p>
+
+            <p>
+                <strong>Capacity to deliver</strong> refers to an organisation's
+                or coalition's ability to engage effectively. This includes
+                skills, knowledge, relationships, credibility, and resources.
+                Strategies to enhance capacity include forming coalitions,
+                internal capacity-building, and securing funding.
+            </p>
+
+            <p>
+                <strong>Policy windows</strong> are moments of opportunity when
+                the conditions for policy change align. Their presence or
+                absence significantly influences the effectiveness of engagement
+                strategies. Understanding when and how windows open—and being
+                prepared when they do—is essential for effective advocacy.
+            </p>
+        </div>
+
+        <p>
+            The rest of this section focuses on policy windows, as they are
+            often the most critical and least understood factor.
+        </p>
+
+        <h3>Policy windows</h3>
+
+        <p>
+            Why do some issues gain political attention while others are ignored
+            for years? Why does change sometimes happen suddenly after long
+            periods of stagnation? The concept of <em>policy windows</em> helps
+            explain these dynamics.
+        </p>
+
+        <p>
+            A policy window is a moment when the conditions for policy change
+            align—when advocates can push their issues onto the agenda and see
+            action taken. John Kingdon's
+            <em>Multiple Streams Framework</em> explains how these windows
+            emerge through the interaction of three streams:
+        </p>
+
+        <p>
+            <strong>The problems stream:</strong> Various conditions compete for
+            attention. A condition becomes a recognised <em>problem</em> when
+            people believe something should be done about it. Problems gain
+            attention through systematic indicators (data showing a condition is
+            worsening), <em>focusing events</em> (crises, disasters, or scandals
+            that shift attention), or feedback on existing policies (evidence
+            that current approaches are failing).
+        </p>
+
+        <p>
+            <strong>The political stream:</strong> This stream follows its own
+            dynamics—elections, shifts in public mood, changes in government,
+            and pressure from interest groups. What happens here strongly
+            affects which issues rise on the agenda. A new administration may
+            bring entirely different priorities. A shift in public opinion may
+            make previously ignored issues suddenly urgent.
+        </p>
+
+        <p>
+            <strong>The policy stream:</strong> Ideas, proposals, and solutions
+            float around in what Kingdon calls a "primeval soup." Specialists
+            develop and refine proposals, test them in various forums, and build
+            support. Not all ideas survive—they are filtered by criteria such as
+            technical feasibility, alignment with values, and anticipated
+            political acceptability. The ideas that survive this process are
+            ready to be picked up when an opportunity arises.
+        </p>
+
+        <p>
+            In practice, these streams are interconnected—but thinking about
+            them separately makes it easier to analyse what is happening and
+            where to focus. A problem may be recognised, but no viable solution
+            exists. A solution may be ready, but there is no political appetite
+            for it. Political conditions may be favourable, but no one has
+            framed the issue effectively.
+        </p>
+
+        <div class="note">
+            <p>
+                The Multiple Streams Framework was developed to explain
+                agenda-setting in democratic systems, where public opinion
+                influences elections and civil society can access
+                decision-makers. In other political contexts, the dynamics may
+                differ significantly. See the Introduction for a note on the
+                scope of this guidebook.
+            </p>
+        </div>
+
+        <h4>When do windows open?</h4>
+
+        <p>
+            Policy windows can be <strong>predictable</strong> or
+            <strong>unpredictable</strong>:
+        </p>
+
+        <ul>
+            <li>
+                <em>Predictable windows</em> arise from scheduled events: the
+                renewal of a law, an upcoming election, a Conference of the
+                Parties, or a required policy review. Advocates can prepare for
+                these in advance.
+            </li>
+            <li>
+                <em>Unpredictable windows</em> arise from crises, disasters,
+                scandals, or unexpected political changes. These require the
+                capacity to respond quickly.
+            </li>
+        </ul>
+
+        <p>Windows can also be opened by events in different streams:</p>
+
+        <ul>
+            <li>
+                A <strong>problem window</strong> opens when a new problem
+                suddenly demands attention—a disaster, a damning report, a
+                focusing event. Decision-makers search for solutions.
+            </li>
+            <li>
+                A <strong>political window</strong> opens when political
+                conditions shift—a new government takes office, public opinion
+                changes, or an election creates pressure to act. Politicians
+                look for problems to solve and commitments to make.
+            </li>
+        </ul>
+
+        <blockquote>
+            <p>
+                "You need this window of opportunity. And then change can happen
+                really fast. This is something that keeps me going. Sometimes
+                you think it will never change, and then suddenly everything
+                comes together."
+            </p>
+            <p class="attribution">– Ulrike Kallee</p>
+        </blockquote>
+
+        <h4>Coupling: linking problems, politics, and solutions</h4>
+
+        <p>
+            When a window opens, <em>coupling</em> becomes possible: linking a
+            recognised problem to a viable solution in a favourable political
+            moment. This coupling does not happen automatically. It requires
+            advocates who have done the preparation—who have solutions ready,
+            relationships in place, and the ability to frame issues in ways that
+            resonate with the political moment.
+        </p>
+
+        <p>
+            Partial couplings happen frequently: a problem is recognised but no
+            solution is ready; a solution exists but there is no political
+            appetite; politics and problems align but no one has a workable
+            proposal. These partial couplings may build pressure over time, but
+            they rarely produce immediate action. It is only when all three
+            streams converge that the likelihood of policy change significantly
+            increases.
+        </p>
+
+        <div class="case-study">
+            <h4>Case Study: Protected Areas in Guatemala</h4>
+
+            <p>
+                In the mid-1980s, Guatemala stood at a crossroads. After sixteen
+                years of military rule, the country transitioned to civilian
+                governance with the election of President Vinicio Cerezo in
+                1986. Only 2.5% of Guatemala's territory was protected, and
+                forest cover had dropped from 68% to 39% in two decades.
+            </p>
+
+            <p>
+                <strong>The political window:</strong> The transition to
+                democracy opened a window for policy change. A new constitution
+                (1985) enabled democratic policy-making processes, including the
+                regulation of environmental issues. Conservation remained
+                non-controversial in Guatemalan politics, with weak and
+                fragmented opposition from industries and landowners.
+            </p>
+
+            <p>
+                <strong>The problems stream:</strong> Rapid deforestation and
+                environmental degradation were increasingly visible. Population
+                growth and migration into forested areas placed pressure on
+                remaining natural resources.
+            </p>
+
+            <p>
+                <strong>The political stream:</strong> Key conservation leaders
+                had personal ties to influential political actors—Marco Cerezo
+                (son of the President) and Jorge Cabrera (brother of the
+                President of the Parliament). Globally, biodiversity
+                conservation was gaining momentum, with IUCN pushing for
+                ambitious protection targets.
+            </p>
+
+            <p>
+                <strong>The policy stream:</strong> National NGOs like
+                Defensores de la Naturaleza had spent years preparing. They
+                conducted biodiversity surveys, identified critical areas, and
+                developed legislative proposals. International partners
+                (including The Nature Conservancy) provided funding and
+                technical expertise.
+            </p>
+
+            <p>
+                <strong>Coupling:</strong> When the window opened, advocates
+                were ready. They had solutions prepared, relationships in place,
+                and framing that resonated with the political moment.
+            </p>
+
+            <p>
+                <strong>The outcome:</strong> In 1989, Guatemala passed the
+                Protected Areas Law, establishing 42 protected areas covering
+                nearly 25% of the country's territory. The Sierra de las Minas
+                Biosphere Reserve became the first protected area in Latin
+                America with management formally delegated to an NGO.
+            </p>
+
+            <p class="source">
+                <em>Source: Garrelts, Birner & Wittmer (2005)</em>
+            </p>
+        </div>
+
+        <p>
+            Windows can also close quickly. Action may be taken (successfully or
+            not), and attention moves elsewhere. The political moment passes.
+            Other issues crowd onto the agenda. The window that seemed open
+            yesterday may be closed today.
+        </p>
+
+        <p>
+            Chapter 3 explores strategies for preparing for and responding to
+            policy windows: foreseeing opportunities, building coalitions,
+            framing issues effectively, and persevering when windows are closed.
+        </p>
+
+        <hr class="section-divider" />
+
+        <h2>1.2 Key Challenges in Policy Engagement</h2>
+
+        <p>
+            Understanding how policy works is only the first step. This section
+            highlights three challenges that shape what is possible—and
+            realistic—when engaging with policy processes. Recognising these
+            challenges upfront helps set appropriate expectations and informs
+            how you plan, act, and learn.
+        </p>
+
+        <h3>Success is hard to define and harder to claim</h3>
+
+        <p>
+            Policy engagement does not produce simple, measurable outcomes like
+            a protected area boundary or a species count. Success in policy is
+            layered, contested, and often ambiguous.
+        </p>
+
+        <p>
+            <strong>What counts as success?</strong> Consider the possibilities:
+        </p>
+
+        <div class="success-levels">
+            <ul>
+                <li>Getting an issue onto the political agenda</li>
+                <li>Securing a public commitment from decision-makers</li>
+                <li>Having language included in a policy document</li>
+                <li>Getting a law passed</li>
+                <li>Seeing that law funded and implemented</li>
+                <li>Observing changes in behaviour on the ground</li>
+                <li>Measuring impact on biodiversity or human wellbeing</li>
+            </ul>
+        </div>
+
+        <p>
+            Each of these represents a different level of success, and achieving
+            one does not guarantee the next. A law can pass but remain unfunded.
+            A commitment can be made but not honoured. Implementation can begin
+            but stall.
+        </p>
+
+        <p>
+            <strong>Did success even happen?</strong> Policy change is often
+            incremental, partial, or reversible. A provision gets weakened
+            during negotiation. Implementation varies across jurisdictions. A
+            new government reverses the policy entirely. What looked like
+            success at one moment may not look like success later.
+        </p>
+
+        <p>
+            <strong>Did you contribute?</strong> Even when success is clear,
+            many actors are involved in any policy outcome. NGOs, researchers,
+            government champions, international pressure, media coverage, public
+            opinion, and sheer timing all play roles. Attributing the outcome to
+            any single organisation's efforts is inherently difficult—and often
+            impossible.
+        </p>
+
+        <p>
+            <strong>Would it have happened anyway?</strong> The counterfactual
+            problem haunts all policy evaluation. Perhaps the window would have
+            opened regardless. Perhaps another actor would have filled your
+            role. This uncertainty is not a reason to disengage, but it does
+            shape how we think about measuring success.
+        </p>
+
+        <p>
+            These challenges do not mean success cannot be assessed. Chapter 4
+            introduces approaches—such as outcome harvesting and contribution
+            analysis—that help teams document what changed, understand their
+            role, and learn for the future. The key is to plan for contribution,
+            not control, and to build learning into your approach from the
+            start.
+        </p>
+
+        <h3>Evidence alone doesn't change minds</h3>
+
+        <p>
+            Many conservation organisations engage where science and policy
+            meet, advocating for the use of data to improve environmental
+            outcomes. The assumption is intuitive: if decision-makers understood
+            the evidence, they would make better choices.
+        </p>
+
+        <p>In practice, this assumption is often wrong.</p>
+
+        <p>
+            Political priorities are shaped by many factors: public opinion,
+            electoral calculations, personal motivations, interest group
+            pressure, and competing demands on attention. Evidence is one input
+            among many, and it is rarely the decisive one. Decision-makers may
+            have all the data and still not act—because the politics are not
+            right, because other issues take priority, because acting would
+            conflict with other goals.
+        </p>
+
+        <blockquote>
+            <p>
+                "If the world as a whole followed scientific data, we would not
+                continue heating up the planet and destroying biodiversity. So
+                pure scientific evidence does not ultimately or directly lead to
+                better environmental policies."
+            </p>
+            <p class="attribution">– Stefan Ferger</p>
+        </blockquote>
+
+        <p>
+            This does not mean evidence is unimportant. It means its role is
+            more specific than often assumed:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Evidence is essential for credibility.</strong> Walking
+                into a meeting without supporting data can be counterproductive.
+                Being able to back up your arguments makes them harder to
+                dismiss.
+            </li>
+            <li>
+                <strong>Evidence matters most when windows are open.</strong>
+                Once decision-makers are receptive and actively seeking
+                solutions, evidence becomes highly valuable. It helps define
+                problems, justify solutions, and demonstrate feasibility.
+            </li>
+            <li>
+                <strong>Evidence is critical for implementation.</strong> After
+                a policy is adopted, technical expertise is needed for
+                rule-making, guidance, and ensuring the original intent is
+                carried out.
+            </li>
+            <li>
+                <strong>The messenger matters as much as the message.</strong>
+                Who presents the evidence affects how it is received. Trusted
+                voices, neutral parties, and community members may be more
+                effective than advocacy organisations perceived as partial.
+            </li>
+        </ul>
+
+        <p>
+            The challenge for practitioners is to use evidence
+            strategically—understanding when it can make a difference and when
+            other factors will dominate. Chapter 3 includes guidance on framing
+            and timing evidence use as part of your engagement strategy.
+        </p>
+
+        <div class="evidence-box">
+            <p class="evidence-label">Evidence in this guidebook</p>
+            <p>
+                Because evidence plays different roles at different stages, we
+                highlight its use with boxes like this one throughout Chapters
+                2, 3, and 4. These boxes help you understand when and how
+                evidence matters—and when other factors will be more decisive.
+            </p>
+        </div>
+
+        <h3>Policy happens at multiple levels</h3>
+
+        <p>
+            Environmental issues do not respect jurisdictional boundaries.
+            Migratory species cross borders. Climate change is global. Supply
+            chains span continents. This means policy engagement often involves
+            multiple levels of governance simultaneously.
+        </p>
+
+        <p>
+            <strong>Global and regional levels:</strong> International
+            agreements—such as the Convention on Biological Diversity or
+            UNFCCC—set frameworks, establish commitments, and create pressure
+            for national action. They provide reference points that civil
+            society can use to hold governments accountable. High-profile
+            conferences generate media attention and political momentum.
+        </p>
+
+        <p>
+            <strong>National level:</strong> This is where most binding law is
+            made and where enforcement is possible. National politics,
+            institutions, and capacity determine whether international
+            commitments translate into action. A global target means little if
+            national legislation does not follow.
+        </p>
+
+        <p>
+            <strong>Local level:</strong> Implementation happens on the ground.
+            Local governments, communities, and land managers make daily
+            decisions that determine whether policies achieve their intended
+            impact.
+        </p>
+
+        <p>
+            These levels interact in complex ways. International commitments can
+            create pressure for national action. National frameworks can enable
+            or constrain local implementation. Local experience can inform
+            national policy and feed into international negotiations.
+        </p>
+
+        <p>
+            For practitioners, this means thinking strategically about where to
+            engage:
+        </p>
+
+        <ul>
+            <li>Where is the decision actually made?</li>
+            <li>Where is political receptivity highest?</li>
+            <li>Where do you have relationships and credibility?</li>
+            <li>
+                How do actions at one level create pressure or opportunity at
+                another?
+            </li>
+        </ul>
+
+        <p>
+            Chapters 2 and 3 include tools for mapping the policy landscape
+            across levels and choosing where to focus your efforts.
+        </p>
+
+        <hr class="section-divider" />
+
+        <h2>1.3 Why You Need Structured Tools</h2>
+
+        <p>
+            The picture painted in this chapter may seem daunting. Policy
+            processes are messy and unpredictable. Windows are brief and hard to
+            anticipate. Success is ambiguous and hard to claim. Evidence alone
+            is not enough. Multiple levels interact in complex ways.
+        </p>
+
+        <p>
+            But these realities are not reasons for despair—they are reasons for
+            preparation.
+        </p>
+
+        <p>
+            If policy processes were predictable, you could wing it. Because
+            they are not, you need to understand your context before you act.
+            This is what Chapter 2 provides: tools for assessing the policy
+            landscape, mapping stakeholders, and understanding where you are in
+            the three streams.
+        </p>
+
+        <p>
+            If you cannot control outcomes, you need to be strategic about where
+            you focus. This is what Chapter 3 provides: approaches for setting
+            goals, selecting strategies, building theories of change, and
+            identifying enablers and barriers.
+        </p>
+
+        <p>
+            If success is hard to measure, you need methods designed for
+            complexity. This is what Chapter 4 provides: approaches like outcome
+            harvesting and contribution analysis that help you learn from
+            experience even when attribution is difficult.
+        </p>
+
+        <p>
+            The rest of this guidebook is practical. It provides steps, tools,
+            and worked examples—including a case study that runs through
+            Chapters 2, 3, and 4. But the foundation is here: an understanding
+            of how policy works and what makes it hard. With that foundation in
+            place, the tools become meaningful.
+        </p>
+
+        <div class="chapter-end">
+            <p>End of Chapter 1</p>
+        </div>
+    </body>
+</html>
