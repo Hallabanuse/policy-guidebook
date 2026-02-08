@@ -234,174 +234,295 @@
         </style>
     </head>
     <body>
-        <h1>Navigating Policy Engagement</h1>
-        <p class="subtitle">A Practitioner's Guidebook</p>
-
-        <div class="status-banner">
-            <p>
-                <strong>Review Draft</strong> — This guidebook is under
-                development. Chapters are being edited collaboratively and
-                shared here for review. Last updated: 8 February 2026.
-            </p>
-        </div>
-
-        <div class="intro">
-            <p>
-                This guidebook helps conservation practitioners engage
-                effectively with policy processes. It provides practical tools
-                for assessing the political landscape, planning strategic
-                engagement, and measuring progress—grounded in the realities of
-                how policy actually works.
-            </p>
-        </div>
-
-        <!-- Front Matter -->
-        <h2>Front Matter</h2>
-        <ul class="chapter-list">
-            <li class="chapter-item">
-                <div class="chapter-link disabled">
-                    <div class="chapter-title">
-                        About This Guidebook
-                        <span class="chapter-status status-pending"
-                            >Coming Soon</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        How to read this guidebook, who it's for, and how it
-                        connects to the Conservation Standards.
-                    </p>
-                </div>
-            </li>
-
-            <li class="chapter-item">
-                <div class="chapter-link disabled">
-                    <div class="chapter-title">
-                        Introduction
-                        <span class="chapter-status status-pending"
-                            >Coming Soon</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        Why this guidebook exists, the CMP Policy Learning
-                        Initiative, and scope and limitations.
-                    </p>
-                </div>
-            </li>
-        </ul>
-
-        <hr class="section-divider" />
-
-        <!-- Chapters -->
-        <h2>Chapters</h2>
-        <ul class="chapter-list">
-            <li class="chapter-item">
-                <a href="chapter1.html" class="chapter-link">
-                    <div class="chapter-number">Chapter 1</div>
-                    <div class="chapter-title">
-                        Understanding Policy Processes
-                        <span class="chapter-status status-complete"
-                            >Complete</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        The foundations: how policy works, policy windows, the
-                        attribution challenge, and why evidence alone doesn't
-                        change minds.
-                    </p>
-                </a>
-            </li>
-
-            <li class="chapter-item">
-                <a href="chapter2.html" class="chapter-link">
-                    <div class="chapter-number">Chapter 2</div>
-                    <div class="chapter-title">
-                        Assessing the Policy Context
-                        <span class="chapter-status status-complete"
-                            >Complete</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        Tools for understanding your context: team readiness,
-                        the Policy Context Tool, stakeholder analysis, and
-                        supporting assessment methods.
-                    </p>
-                </a>
-            </li>
-
-            <li class="chapter-item">
-                <div class="chapter-link disabled">
-                    <div class="chapter-number">Chapter 3</div>
-                    <div class="chapter-title">
-                        Planning Policy Engagement
-                        <span class="chapter-status status-pending"
-                            >Coming Soon</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        Defining goals, selecting strategies, building a theory
-                        of change, and identifying enablers and barriers.
-                    </p>
-                </div>
-            </li>
-
-            <li class="chapter-item">
-                <div class="chapter-link disabled">
-                    <div class="chapter-number">Chapter 4</div>
-                    <div class="chapter-title">
-                        Measuring Success
-                        <span class="chapter-status status-pending"
-                            >Coming Soon</span
-                        >
-                    </div>
-                    <p class="chapter-description">
-                        Approaches for measuring influence: outcome harvesting,
-                        contribution analysis, and the RPSB framework.
-                    </p>
-                </div>
-            </li>
-        </ul>
-
-        <hr class="section-divider" />
-
-        <!-- Evidence Companion -->
-        <div class="companion-box">
-            <h2>
-                The Evidence Companion
-                <span class="coming-soon">Coming Soon</span>
-            </h2>
-            <p>
-                A companion document providing the research foundation behind
-                this guidebook: full literature analysis, interview findings,
-                cognitive science of evidence use, and detailed methodologies.
-            </p>
-            <p>
-                <em
-                    >The Guidebook tells you what to do. The Evidence Companion
-                    explains why it works.</em
+        <div
+            id="password-screen"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #f8f9f7;
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            "
+        >
+            <div
+                style="
+                    background: white;
+                    padding: 2.5rem;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    max-width: 400px;
+                    width: 90%;
+                "
+            >
+                <h1
+                    style="
+                        color: #2c5530;
+                        font-size: 1.5rem;
+                        margin-bottom: 0.5rem;
+                        border: none;
+                    "
                 >
-            </p>
+                    Navigating Policy Engagement
+                </h1>
+                <p
+                    style="
+                        color: #666;
+                        font-style: italic;
+                        margin-bottom: 1.5rem;
+                    "
+                >
+                    A Practitioner's Guidebook
+                </p>
+                <p style="color: #333; margin-bottom: 1.5rem">
+                    This is a review draft. Please enter the password to access.
+                </p>
+                <input
+                    type="password"
+                    id="password-input"
+                    placeholder="Enter password"
+                    style="
+                        width: 100%;
+                        padding: 0.75rem;
+                        font-size: 1rem;
+                        border: 1px solid #d4e4d4;
+                        border-radius: 4px;
+                        margin-bottom: 1rem;
+                    "
+                    onkeypress="if (event.key === 'Enter') checkPassword();"
+                />
+                <button
+                    onclick="checkPassword()"
+                    style="
+                        width: 100%;
+                        padding: 0.75rem;
+                        font-size: 1rem;
+                        background-color: #2c5530;
+                        color: white;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    "
+                >
+                    Enter
+                </button>
+                <p
+                    id="password-error"
+                    style="color: #c0392b; margin-top: 1rem; display: none"
+                >
+                    Incorrect password. Please try again.
+                </p>
+            </div>
         </div>
+        <script>
+            (function () {
+                var correct = "review2026";
+                if (sessionStorage.getItem("guidebook_auth") !== "true") {
+                    document.getElementById("password-screen").style.display =
+                        "flex";
+                    document.getElementById(
+                        "password-screen",
+                    ).nextElementSibling.style.display = "none";
+                }
+                window.checkPassword = function () {
+                    if (
+                        document.getElementById("password-input").value ===
+                        correct
+                    ) {
+                        sessionStorage.setItem("guidebook_auth", "true");
+                        document.getElementById(
+                            "password-screen",
+                        ).style.display = "none";
+                        document.getElementById(
+                            "password-screen",
+                        ).nextElementSibling.style.display = "block";
+                    } else {
+                        document.getElementById(
+                            "password-error",
+                        ).style.display = "block";
+                    }
+                };
+            })();
+        </script>
+        <div id="main-content">
+            <h1>Navigating Policy Engagement</h1>
+            <p class="subtitle">A Practitioner's Guidebook</p>
 
-        <!-- Resources -->
-        <div class="resources-section">
-            <h2>Case Study Visualizations</h2>
-            <ul class="resource-list">
-                <li>
-                    <a href="./Chapter2_Situation_Model.html"
-                        >PFAS Situation Model</a
-                    >
-                    — Conservation Standards situation model for the PFAS case
-                    study
+            <div class="status-banner">
+                <p>
+                    <strong>Review Draft</strong> — This guidebook is under
+                    development. Chapters are being edited collaboratively and
+                    shared here for review. Last updated: 8 February 2026.
+                </p>
+            </div>
+
+            <div class="intro">
+                <p>
+                    This guidebook helps conservation practitioners engage
+                    effectively with policy processes. It provides practical
+                    tools for assessing the political landscape, planning
+                    strategic engagement, and measuring progress—grounded in the
+                    realities of how policy actually works.
+                </p>
+            </div>
+
+            <!-- Front Matter -->
+            <h2>Front Matter</h2>
+            <ul class="chapter-list">
+                <li class="chapter-item">
+                    <div class="chapter-link disabled">
+                        <div class="chapter-title">
+                            About This Guidebook
+                            <span class="chapter-status status-pending"
+                                >Coming Soon</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            How to read this guidebook, who it's for, and how it
+                            connects to the Conservation Standards.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="chapter-item">
+                    <div class="chapter-link disabled">
+                        <div class="chapter-title">
+                            Introduction
+                            <span class="chapter-status status-pending"
+                                >Coming Soon</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            Why this guidebook exists, the CMP Policy Learning
+                            Initiative, and scope and limitations.
+                        </p>
+                    </div>
                 </li>
             </ul>
-        </div>
 
-        <footer>
-            <p>
-                Developed by the CMP Collaborative Learning Initiative on Policy
-                Impact
-            </p>
-            <p>Coordinated by FOS Europe</p>
-        </footer>
+            <hr class="section-divider" />
+
+            <!-- Chapters -->
+            <h2>Chapters</h2>
+            <ul class="chapter-list">
+                <li class="chapter-item">
+                    <a href="chapter1.html" class="chapter-link">
+                        <div class="chapter-number">Chapter 1</div>
+                        <div class="chapter-title">
+                            Understanding Policy Processes
+                            <span class="chapter-status status-complete"
+                                >Complete</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            The foundations: how policy works, policy windows,
+                            the attribution challenge, and why evidence alone
+                            doesn't change minds.
+                        </p>
+                    </a>
+                </li>
+
+                <li class="chapter-item">
+                    <a href="chapter2.html" class="chapter-link">
+                        <div class="chapter-number">Chapter 2</div>
+                        <div class="chapter-title">
+                            Assessing the Policy Context
+                            <span class="chapter-status status-complete"
+                                >Complete</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            Tools for understanding your context: team
+                            readiness, the Policy Context Tool, stakeholder
+                            analysis, and supporting assessment methods.
+                        </p>
+                    </a>
+                </li>
+
+                <li class="chapter-item">
+                    <div class="chapter-link disabled">
+                        <div class="chapter-number">Chapter 3</div>
+                        <div class="chapter-title">
+                            Planning Policy Engagement
+                            <span class="chapter-status status-pending"
+                                >Coming Soon</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            Defining goals, selecting strategies, building a
+                            theory of change, and identifying enablers and
+                            barriers.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="chapter-item">
+                    <div class="chapter-link disabled">
+                        <div class="chapter-number">Chapter 4</div>
+                        <div class="chapter-title">
+                            Measuring Success
+                            <span class="chapter-status status-pending"
+                                >Coming Soon</span
+                            >
+                        </div>
+                        <p class="chapter-description">
+                            Approaches for measuring influence: outcome
+                            harvesting, contribution analysis, and the RPSB
+                            framework.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+            <hr class="section-divider" />
+
+            <!-- Evidence Companion -->
+            <div class="companion-box">
+                <h2>
+                    The Evidence Companion
+                    <span class="coming-soon">Coming Soon</span>
+                </h2>
+                <p>
+                    A companion document providing the research foundation
+                    behind this guidebook: full literature analysis, interview
+                    findings, cognitive science of evidence use, and detailed
+                    methodologies.
+                </p>
+                <p>
+                    <em
+                        >The Guidebook tells you what to do. The Evidence
+                        Companion explains why it works.</em
+                    >
+                </p>
+            </div>
+
+            <!-- Resources -->
+            <div class="resources-section">
+                <h2>Case Study Visualizations</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="./Chapter2_Situation_Model.html"
+                            >PFAS Situation Model</a
+                        >
+                        — Conservation Standards situation model for the PFAS
+                        case study
+                    </li>
+                </ul>
+            </div>
+
+            <footer>
+                <p>
+                    Developed by the CMP Collaborative Learning Initiative on
+                    Policy Impact
+                </p>
+                <p>Coordinated by FOS Europe</p>
+            </footer>
+        </div>
     </body>
 </html>
