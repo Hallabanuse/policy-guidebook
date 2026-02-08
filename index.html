@@ -64,6 +64,13 @@
                 margin-bottom: 2rem;
             }
 
+            h2 {
+                font-size: 1.4rem;
+                color: var(--primary-color);
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+
             .chapter-list {
                 list-style: none;
                 padding: 0;
@@ -148,6 +155,33 @@
                 margin: 2.5rem 0;
             }
 
+            .companion-box {
+                background-color: #e8f4f8;
+                border: 2px solid #a8d4e6;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .companion-box h2 {
+                color: #2874a6;
+                margin-top: 0;
+            }
+
+            .companion-box p {
+                margin-bottom: 0.5rem;
+            }
+
+            .companion-box .coming-soon {
+                display: inline-block;
+                font-size: 0.8rem;
+                padding: 0.25rem 0.6rem;
+                border-radius: 4px;
+                background-color: #a8d4e6;
+                color: #1a5276;
+                margin-left: 0.5rem;
+            }
+
             .resources-section h2 {
                 font-size: 1.4rem;
                 color: var(--primary-color);
@@ -207,7 +241,7 @@
             <p>
                 <strong>Review Draft</strong> — This guidebook is under
                 development. Chapters are being edited collaboratively and
-                shared here for review. Last updated: 7 February 2026.
+                shared here for review. Last updated: 8 February 2026.
             </p>
         </div>
 
@@ -221,6 +255,44 @@
             </p>
         </div>
 
+        <!-- Front Matter -->
+        <h2>Front Matter</h2>
+        <ul class="chapter-list">
+            <li class="chapter-item">
+                <div class="chapter-link disabled">
+                    <div class="chapter-title">
+                        About This Guidebook
+                        <span class="chapter-status status-pending"
+                            >Coming Soon</span
+                        >
+                    </div>
+                    <p class="chapter-description">
+                        How to read this guidebook, who it's for, and how it
+                        connects to the Conservation Standards.
+                    </p>
+                </div>
+            </li>
+
+            <li class="chapter-item">
+                <div class="chapter-link disabled">
+                    <div class="chapter-title">
+                        Introduction
+                        <span class="chapter-status status-pending"
+                            >Coming Soon</span
+                        >
+                    </div>
+                    <p class="chapter-description">
+                        Why this guidebook exists, the CMP Policy Learning
+                        Initiative, and scope and limitations.
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="section-divider" />
+
+        <!-- Chapters -->
+        <h2>Chapters</h2>
         <ul class="chapter-list">
             <li class="chapter-item">
                 <a href="chapter1.html" class="chapter-link">
@@ -291,8 +363,28 @@
 
         <hr class="section-divider" />
 
+        <!-- Evidence Companion -->
+        <div class="companion-box">
+            <h2>
+                The Evidence Companion
+                <span class="coming-soon">Coming Soon</span>
+            </h2>
+            <p>
+                A companion document providing the research foundation behind
+                this guidebook: full literature analysis, interview findings,
+                cognitive science of evidence use, and detailed methodologies.
+            </p>
+            <p>
+                <em
+                    >The Guidebook tells you what to do. The Evidence Companion
+                    explains why it works.</em
+                >
+            </p>
+        </div>
+
+        <!-- Resources -->
         <div class="resources-section">
-            <h2>Case Study Visualization</h2>
+            <h2>Case Study Visualizations</h2>
             <ul class="resource-list">
                 <li>
                     <a href="./Chapter2_Situation_Model.html"
