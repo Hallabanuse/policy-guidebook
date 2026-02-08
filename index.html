@@ -13,11 +13,9 @@
                 --light-bg: #f8f9f7;
                 --border-color: #d4e4d4;
             }
-
             * {
                 box-sizing: border-box;
             }
-
             body {
                 font-family: "Georgia", serif;
                 line-height: 1.7;
@@ -27,7 +25,6 @@
                 padding: 2rem;
                 background-color: #fff;
             }
-
             h1 {
                 font-size: 2.2rem;
                 color: var(--primary-color);
@@ -35,14 +32,12 @@
                 padding-bottom: 0.5rem;
                 margin-bottom: 0.5rem;
             }
-
             .subtitle {
                 font-size: 1.2rem;
                 color: #666;
                 margin-bottom: 2rem;
                 font-style: italic;
             }
-
             .status-banner {
                 background-color: #fff8e6;
                 border: 1px solid #e6d9a8;
@@ -51,36 +46,29 @@
                 padding: 1rem 1.5rem;
                 margin-bottom: 2rem;
             }
-
             .status-banner p {
                 margin: 0;
             }
-
             .status-banner strong {
                 color: #8b6914;
             }
-
             .intro {
                 margin-bottom: 2rem;
             }
-
             h2 {
                 font-size: 1.4rem;
                 color: var(--primary-color);
                 margin-top: 0;
                 margin-bottom: 1rem;
             }
-
             .chapter-list {
                 list-style: none;
                 padding: 0;
                 margin: 0;
             }
-
             .chapter-item {
                 margin-bottom: 1rem;
             }
-
             .chapter-link {
                 display: block;
                 background-color: var(--light-bg);
@@ -91,19 +79,16 @@
                 color: var(--text-color);
                 transition: all 0.2s ease;
             }
-
             .chapter-link:hover {
                 background-color: #e8f0e8;
                 border-color: var(--accent-color);
                 transform: translateX(4px);
             }
-
             .chapter-link.disabled {
                 opacity: 0.5;
                 pointer-events: none;
                 background-color: #f5f5f5;
             }
-
             .chapter-number {
                 font-size: 0.85rem;
                 color: var(--secondary-color);
@@ -111,20 +96,17 @@
                 letter-spacing: 0.5px;
                 margin-bottom: 0.25rem;
             }
-
             .chapter-title {
                 font-size: 1.3rem;
                 color: var(--primary-color);
                 font-weight: bold;
                 margin-bottom: 0.25rem;
             }
-
             .chapter-description {
                 font-size: 0.95rem;
                 color: #666;
                 margin: 0;
             }
-
             .chapter-status {
                 display: inline-block;
                 font-size: 0.75rem;
@@ -133,28 +115,19 @@
                 margin-left: 0.5rem;
                 vertical-align: middle;
             }
-
             .status-complete {
                 background-color: #d4edda;
                 color: #155724;
             }
-
-            .status-draft {
-                background-color: #fff3cd;
-                color: #856404;
-            }
-
             .status-pending {
                 background-color: #e2e3e5;
                 color: #6c757d;
             }
-
             .section-divider {
                 border: none;
                 border-top: 2px solid var(--border-color);
                 margin: 2.5rem 0;
             }
-
             .companion-box {
                 background-color: #e8f4f8;
                 border: 2px solid #a8d4e6;
@@ -162,16 +135,13 @@
                 padding: 1.5rem;
                 margin-bottom: 2rem;
             }
-
             .companion-box h2 {
                 color: #2874a6;
                 margin-top: 0;
             }
-
             .companion-box p {
                 margin-bottom: 0.5rem;
             }
-
             .companion-box .coming-soon {
                 display: inline-block;
                 font-size: 0.8rem;
@@ -181,31 +151,25 @@
                 color: #1a5276;
                 margin-left: 0.5rem;
             }
-
             .resources-section h2 {
                 font-size: 1.4rem;
                 color: var(--primary-color);
                 margin-bottom: 1rem;
             }
-
             .resource-list {
                 list-style: none;
                 padding: 0;
             }
-
             .resource-list li {
                 margin-bottom: 0.5rem;
             }
-
             .resource-list a {
                 color: var(--secondary-color);
                 text-decoration: none;
             }
-
             .resource-list a:hover {
                 text-decoration: underline;
             }
-
             footer {
                 margin-top: 3rem;
                 padding-top: 1.5rem;
@@ -213,31 +177,11 @@
                 font-size: 0.9rem;
                 color: #888;
             }
-
             footer p {
                 margin: 0.25rem 0;
             }
-
-            @media (max-width: 600px) {
-                body {
-                    padding: 1rem;
-                }
-
-                h1 {
-                    font-size: 1.8rem;
-                }
-
-                .chapter-title {
-                    font-size: 1.1rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div
-            id="password-screen"
-            style="
-                display: none;
+            #password-screen {
+                display: flex;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -245,32 +189,73 @@
                 height: 100%;
                 background: #f8f9f7;
                 z-index: 9999;
-                display: flex;
                 justify-content: center;
                 align-items: center;
-            "
-        >
-            <div
-                style="
-                    background: white;
-                    padding: 2.5rem;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    text-align: center;
-                    max-width: 400px;
-                    width: 90%;
-                "
-            >
-                <h1
-                    style="
-                        color: #2c5530;
-                        font-size: 1.5rem;
-                        margin-bottom: 0.5rem;
-                        border: none;
-                    "
-                >
-                    Navigating Policy Engagement
-                </h1>
+            }
+            #password-screen.hidden {
+                display: none;
+            }
+            #main-content.hidden {
+                display: none;
+            }
+            .password-box {
+                background: white;
+                padding: 2.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                max-width: 400px;
+                width: 90%;
+            }
+            .password-box h1 {
+                color: #2c5530;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                border: none;
+            }
+            .password-box input {
+                width: 100%;
+                padding: 0.75rem;
+                font-size: 1rem;
+                border: 1px solid #d4e4d4;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+            }
+            .password-box button {
+                width: 100%;
+                padding: 0.75rem;
+                font-size: 1rem;
+                background-color: #2c5530;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .password-box button:hover {
+                background-color: #4a7c50;
+            }
+            .password-error {
+                color: #c0392b;
+                margin-top: 1rem;
+                display: none;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+                h1 {
+                    font-size: 1.8rem;
+                }
+                .chapter-title {
+                    font-size: 1.1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="password-screen">
+            <div class="password-box">
+                <h1>Navigating Policy Engagement</h1>
                 <p
                     style="
                         color: #666;
@@ -287,70 +272,16 @@
                     type="password"
                     id="password-input"
                     placeholder="Enter password"
-                    style="
-                        width: 100%;
-                        padding: 0.75rem;
-                        font-size: 1rem;
-                        border: 1px solid #d4e4d4;
-                        border-radius: 4px;
-                        margin-bottom: 1rem;
-                    "
                     onkeypress="if (event.key === 'Enter') checkPassword();"
                 />
-                <button
-                    onclick="checkPassword()"
-                    style="
-                        width: 100%;
-                        padding: 0.75rem;
-                        font-size: 1rem;
-                        background-color: #2c5530;
-                        color: white;
-                        border: none;
-                        border-radius: 4px;
-                        cursor: pointer;
-                    "
-                >
-                    Enter
-                </button>
-                <p
-                    id="password-error"
-                    style="color: #c0392b; margin-top: 1rem; display: none"
-                >
+                <button onclick="checkPassword()">Enter</button>
+                <p class="password-error" id="password-error">
                     Incorrect password. Please try again.
                 </p>
             </div>
         </div>
-        <script>
-            (function () {
-                var correct = "review2026";
-                if (sessionStorage.getItem("guidebook_auth") !== "true") {
-                    document.getElementById("password-screen").style.display =
-                        "flex";
-                    document.getElementById(
-                        "password-screen",
-                    ).nextElementSibling.style.display = "none";
-                }
-                window.checkPassword = function () {
-                    if (
-                        document.getElementById("password-input").value ===
-                        correct
-                    ) {
-                        sessionStorage.setItem("guidebook_auth", "true");
-                        document.getElementById(
-                            "password-screen",
-                        ).style.display = "none";
-                        document.getElementById(
-                            "password-screen",
-                        ).nextElementSibling.style.display = "block";
-                    } else {
-                        document.getElementById(
-                            "password-error",
-                        ).style.display = "block";
-                    }
-                };
-            })();
-        </script>
-        <div id="main-content">
+
+        <div id="main-content" class="hidden">
             <h1>Navigating Policy Engagement</h1>
             <p class="subtitle">A Practitioner's Guidebook</p>
 
@@ -372,7 +303,6 @@
                 </p>
             </div>
 
-            <!-- Front Matter -->
             <h2>Front Matter</h2>
             <ul class="chapter-list">
                 <li class="chapter-item">
@@ -389,7 +319,6 @@
                         </p>
                     </div>
                 </li>
-
                 <li class="chapter-item">
                     <div class="chapter-link disabled">
                         <div class="chapter-title">
@@ -408,7 +337,6 @@
 
             <hr class="section-divider" />
 
-            <!-- Chapters -->
             <h2>Chapters</h2>
             <ul class="chapter-list">
                 <li class="chapter-item">
@@ -427,7 +355,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="chapter-item">
                     <a href="chapter2.html" class="chapter-link">
                         <div class="chapter-number">Chapter 2</div>
@@ -444,7 +371,6 @@
                         </p>
                     </a>
                 </li>
-
                 <li class="chapter-item">
                     <div class="chapter-link disabled">
                         <div class="chapter-number">Chapter 3</div>
@@ -461,7 +387,6 @@
                         </p>
                     </div>
                 </li>
-
                 <li class="chapter-item">
                     <div class="chapter-link disabled">
                         <div class="chapter-number">Chapter 4</div>
@@ -482,7 +407,6 @@
 
             <hr class="section-divider" />
 
-            <!-- Evidence Companion -->
             <div class="companion-box">
                 <h2>
                     The Evidence Companion
@@ -502,7 +426,6 @@
                 </p>
             </div>
 
-            <!-- Resources -->
             <div class="resources-section">
                 <h2>Case Study Visualizations</h2>
                 <ul class="resource-list">
@@ -524,5 +447,37 @@
                 <p>Coordinated by FOS Europe</p>
             </footer>
         </div>
+
+        <script>
+            (function () {
+                var correct = "review2026";
+                if (sessionStorage.getItem("guidebook_auth") === "true") {
+                    document
+                        .getElementById("password-screen")
+                        .classList.add("hidden");
+                    document
+                        .getElementById("main-content")
+                        .classList.remove("hidden");
+                }
+                window.checkPassword = function () {
+                    if (
+                        document.getElementById("password-input").value ===
+                        correct
+                    ) {
+                        sessionStorage.setItem("guidebook_auth", "true");
+                        document
+                            .getElementById("password-screen")
+                            .classList.add("hidden");
+                        document
+                            .getElementById("main-content")
+                            .classList.remove("hidden");
+                    } else {
+                        document.getElementById(
+                            "password-error",
+                        ).style.display = "block";
+                    }
+                };
+            })();
+        </script>
     </body>
 </html>
